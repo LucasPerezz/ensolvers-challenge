@@ -1,0 +1,27 @@
+
+GET  http://localhost:3000/api/notes/
+###
+POST http://localhost:3000/api/notes/
+Content-Type: application/json
+
+{
+    "title": "segunda nota",
+    "description": "hola, esta es mi segunda nota"
+}
+
+###
+GET  http://localhost:3000/api/notes/1
+
+
+###
+DELETE http://localhost:3000/api/notes/2
+
+###
+PUT http://localhost:3000/api/notes/2
+Content-Type: application/json
+
+{
+    "title": "actualizada",
+    "description": "esto es una nota actualizada"
+}
+
