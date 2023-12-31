@@ -2,12 +2,14 @@ const express = require('express');
 const notesRouter = require('./src/routes/notes.routes.js');
 const tagsRouter = require('./src/routes/tags.routes.js');
 const belongs_toRouter = require('./src/routes/belongs_to.routes.js');
-
+const config = require('./config/config.js');
+const cors = require('cors');
 
 
 const app = express();
-const PORT = 3000;
+const PORT = config.port;
 app.use(express.json());
+app.use(cors());
 
 app.use('/api/notes', notesRouter);
 app.use('/api/tags', tagsRouter);
