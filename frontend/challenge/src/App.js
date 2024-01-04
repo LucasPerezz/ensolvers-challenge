@@ -1,14 +1,17 @@
-import './App.css';
-import Home from './components/Home/Home';
-import SearchNote from './components/SearchNote/SearchNote';
-import {Context} from './context/Context';
+import "./App.css";
+import Home from "./components/Home/Home";
+import { Context } from "./context/Context";
+import { Routes, Route } from "react-router-dom";
+import Archive from "./components/Archive/Archive";
 
 function App() {
   return (
     <div className="App">
       <Context>
-        <SearchNote />
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/archived" element={<Archive />} />
+        </Routes>
       </Context>
     </div>
   );

@@ -1,5 +1,5 @@
 
-GET  http://localhost:3000/api/notes/
+GET  http://localhost:3000/api/notes/6
 ###
 POST http://localhost:3000/api/notes/
 Content-Type: application/json
@@ -24,4 +24,7 @@ Content-Type: application/json
     "title": "actualizada",
     "description": "esto es una nota actualizada"
 }
+
+###
+GET http://localhost:3000/api/archived/8
 
